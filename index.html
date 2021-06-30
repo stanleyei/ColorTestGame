@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorTestGame</title>
+    <link rel="stylesheet" href="./ColorTestGame.css">
+</head>
+
+<body>
+    <div id="container">
+        <input type="checkbox" id="checkbox" class="none">
+        <div id="depiction">
+            <h1>免費色弱測試</h1><br>
+            <span>The Color !</span><br><br>
+            <span>找出所有色塊裡顏色不同的一個<br><br>
+                Click on the tile that has a different color</span>
+        </div>
+        <label for="checkbox" class="absolute">PLAY</label>
+        <div id="score" class="reminder-box none absolute"></div>
+        <div id="countdown-box" class="reminder-box none absolute"></div>
+        <button id="pause-resume" class="reminder-box none  absolute">PAUSE</button>
+        <div id="bigcube" class="absolute"></div>
+        <div id="thinking" class="absolute">再想一下</div>
+    </div>
+
+    <script src="./ColorTestGame.js"></script>
+</body>
+
+</html>

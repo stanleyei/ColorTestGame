@@ -1,0 +1,119 @@
+        :root{
+            --scoreValue: 0;
+        }        
+        
+        * {
+            box-sizing: border-box;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 30px;
+            background-color: #F06060;
+        }
+
+        .none {
+            display: none;
+        }
+
+        .reminder-box{
+            width: 150px;
+            height: 42px;
+            background-color: #ddd;
+            border: black 3px solid;
+            line-height: 36px;
+        }
+
+        .absolute{
+            position: absolute;
+        }
+
+        label {
+            width: 220px;
+            height: 120px;
+            bottom: 7%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ddd;
+            border: black 3px solid;
+            line-height: 114px;
+            font-size: 50px;
+            cursor: pointer;
+        }
+
+        label:active{
+            background-color: yellow;
+        }
+
+        #score{
+            top: 2%;
+            left: 2%;
+        }
+
+        #countdown-box {
+            top: 2%;
+            right: 2%;
+        }
+
+        #pause-resume {
+            bottom: 2%;
+            right: 2%;
+            cursor: pointer;
+        }
+
+        #pause-resume:active{
+            background-color: yellow;
+        }
+
+        #bigcube {
+            width: 500px;
+            height: 500px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ddd;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            cursor: pointer;
+            display: none;
+        }
+
+        #thinking{
+            width: 500px;
+            height: 500px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 120px;
+            line-height: 500px;
+            display: none;
+        }
+
+        input[type="checkbox"]:checked~label {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked~.none {
+            display: block;
+        }
+
+        input[type="checkbox"]:checked~#bigcube {
+            display: flex;
+        }
+
+        input[type="checkbox"]:checked~#depiction {
+            display: none;
+        }
+
+        .cube {
+            border: #ddd 5px solid;
+        }
+
+        .lightcolor {
+            opacity: calc(0.5 + calc(var(--scoreValue) / 100));
+        }
